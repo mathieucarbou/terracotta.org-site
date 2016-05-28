@@ -1,0 +1,76 @@
+# Site settings
+title: Terracotta
+email: tc-oss@softwareag.com
+description: Java's most widely used cache.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.terracotta.org" # the base hostname & protocol for your site
+twitter_username: terracottatech
+github_username:  terracotta-oss
+linkedin_username: terracotta
+facebook_username:  Terracotta
+disqus_shortname: ehcache
+
+eh3_source_dir: /_eh3
+
+# Build settings
+markdown: kramdown
+
+
+gems:
+  - jekyll-asciidoc
+  - jekyll-sitemap
+
+
+asciidoctor:
+  attributes:
+#    - hardbreaks!
+    - source-highlighter=prettify
+#    - source-highlighter=pygments
+    - pygments-css=style
+    - icons=font
+    - sourcedir=/_eh3
+    - sectanchors
+    - idprefix
+    - idseparator=-
+
+
+defaults:
+  -
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "drafts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "community"
+      type: "pages"
+    values:
+      layout: "community_page"
+  -
+    scope:
+      path: "documentation"
+      type: "pages"
+    values:
+      layout: "docs_page"
+  -
+    scope:
+      path: "documentation/2.8"
+      type: "pages"
+    values:
+      layout: "docs4x_page"
+      tc_version: "2.8"
+      tc_javadoc_version: "2.8.5"

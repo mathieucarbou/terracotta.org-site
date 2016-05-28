@@ -1,0 +1,52 @@
+---
+title: Documentation
+visible_title: "Terracotta Documentation"
+permalink: /documentation/
+---
+
+# Documentation
+
+[[current_version]]
+
+#### Current Documentation
+
+[cols="3,1", options="header"]
+|===
+|
+|
+
+|link:/documentation/4.3/[Terracotta 4.3 Documentation]
+|link:/apidocs/3.0.0/index.html[JavaDoc ??????, role="external", window="_blank"]
+
+|---
+| &nbsp;
+
+|link:http://www.terracotta.org/confluence/display/release/Home[Platform and Release Compatibility Tables, role="external", window="_blank"]
+|
+
+|link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:http://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
+|
+|===
+
+If you don’t find what you’re looking for in the docs, post a question to the https://groups.google.com/forum/#!forum/terracotta-oss[Terracotta support forums, role="external", window="_blank"].
+
+---
+
+#### Release Notes
+
+https://confluence.terracotta.org//display/release/Home[Release Notes, role="external", window="_blank"]  (all versions)
+
+---
+
+[[historical_versions]]
+
+#### Historical Versions
+
+[cols="3,1", options="header"]
+|===
+|
+|
+
+|link:/documentation/4.1/[Terracotta 4.1 Documentation]
+|link:/apidocs/2.9/index.html[JavaDoc ????, role="external", window="_blank"]
+|===
