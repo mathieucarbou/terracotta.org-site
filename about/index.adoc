@@ -1,0 +1,30 @@
+---
+layout: about_page
+title: About
+visible_title: "Terracotta Server and Related Projects"
+permalink: /about/
+active_sub_menu_id: tc_mnu_about_about
+---
+
+++++
+{% include about_intro.html %}
+++++
+
+Visit https://github.com/terracotta-oss for a full list of open source projects and libraries, such as our famous https://github.com/Terracotta-OSS/offheap-store[off-heap memory library].
+
+## Scale Up and Scale Out
+
+Keep ALL of your data—up to 100s of terabytes—instantly available in RAM distributed across any size server array.
+
+
+### Some key features of the Terracotta Server include:
+
+* **Distributed In-memory Data Management** &ndash;  Manages 10-100x more data in memory than traditional data grids - use _all_ of the RAM you wish.
+* **Scalability Without Complexity** &ndash;  Simple configuration to add server instances to meet growing demand and facilitate capacity planning
+* **High Availability** &ndash;  Instant failover for continuous uptime and services
+* **Configurable Health Monitoring** &ndash;  Terracotta HealthChecker for inter-node monitoring
+* **Automatic Node Reconnection** &ndash;  Temporarily disconnected server instances and clients rejoin the cluster without operator intervention
+
+Terracotta actively develops, maintains, and supports Terracotta Server as a professional open source project available under the liberal Terracotta Public License 2.0.  Contributors are welcome to join our community.
+
+For applications requiring complete enterprise functionality including management monitoring console (TMC), fast-restartable store (FRS), security, plus more - along with worldwide professional support, please use http://www.softwareag.com/corporate/products/terracotta/in-memory_data_mgmt/overview/default.asp[Terracotta BigMemory Max] from Software AG.

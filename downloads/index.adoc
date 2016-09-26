@@ -1,0 +1,31 @@
+---
+layout: page
+title: Downloads
+visible_title: "Download Terracotta Server"
+permalink: /downloads/
+active_menu_id: tc_mnu_download
+---
+
+## Direct/Manual Downloads
+
+---
+
+
+### Terracotta Server 4.x
+
+
+> http://d2zwv9pap9ylyd.cloudfront.net/terracotta-4.3.2.tar.gz[Terracotta Server 4.3.2]  .tar.gz
+
+Terracotta server 4.3.x works with Ehcache 2.10.x.
+
+For more information on this release, see the [release  notes](http://www.terracotta.org/confluence/display/release/Home).
+
+
+---
+
+### Terracotta Server 3.x
+
+Open source Terracotta Server Array (3.7) can be downloaded from http://d2zwv9pap9ylyd.cloudfront.net/terracotta-3.7.7.tar.gz[terracotta-3.7.7.tar.gz].
+This is compatible with Ehcache 2.6.8 and Quartz 2.1.7.
+
+NOTE: Please note that the 3.x code line is now several years old and is out of commercial support availability.
