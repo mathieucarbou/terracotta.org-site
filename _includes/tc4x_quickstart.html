@@ -1,0 +1,107 @@
+
+      <h1>Getting Started</h1>
+
+      Getting started with the Terracotta Server is a simple matter of downloading, changing a few configuration
+      items, and starting it up.
+
+      Because the server isn't very interesting without something using it, this guide will show you how to put
+      the Terracotta Server to its most common use: clustering an Ehcache cache.
+
+      <br/><br/>
+
+      <h2>Download and Install</h2>
+
+      Installing and using Terracotta Server is as easy as downloading the kit and ensuring that the correct files are on your application's classpath. The only platform requirement is using JDK 1.6 or higher.
+
+      <br/><br/>
+
+      <h3>1 - Download the Terracotta Server.</h3>
+
+      The kit is packaged as a tar.gz file. <a href="/downloads">Download</a> it then unpack it on the command line or with the appropriate decompression application.
+
+      <br/><br/>
+
+      <h3>2 - Update Classpath</h3>
+
+      Add the following JARs from within the kit to your application's classpath (if they are not already there):
+
+      <ul>
+          <li> <code>apis/ehcache/lib/ehcache-&lt;version&gt;.jar</code> &ndash; This file contains the Ehcache API.</li>
+
+          <li> <code>apis/ehcache/lib/slf4j-api-&lt;version&gt;.jar</code> &ndash; This file is the bridge, or logging facade, to the BigMemory Max logging framework.</li>
+
+          <li> <code>apis/toolkit/lib/terracotta-toolkit-runtime-&lt;version&gt;.jar</code> &ndash; This JAR contains the libraries that enable connecting Ehcache to the Terracotta Server.</li>
+       </ul>
+
+       <h3>3 - Configure Ehcache</h3>
+
+       Configure Ehcache to utilize the Terracotta Server. Create an `ehcache.xml` configuration file, or modify your own existing Ehcache configuration, or update the one that is provided in the config-samples/ directory of the downloaded Terracotta Server kit. For example:
+
+       <pre class="pre-indented prettyprint"><code><span class="tag">&lt;ehcache</span><span class="pln"> </span><span class="atn">xmlns:xsi</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;</span><span class="atn">xsi:noNamespaceSchemaLocation</span><span class="pun">=</span><span class="atv">"http://ehcache.org/ehcache.xsd"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp;</span><span class="atn">name</span><span class="pun">=</span><span class="atv">"myBigMemoryMaxConfig"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; </span><span class="com">&lt;!-- Tell BigMemory where to write its data to disk. --&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;diskStore</span><span class="pln"> </span><span class="atn">path</span><span class="pun">=</span><span class="atv">"/path/to/my/disk/store/directory"</span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; </span><span class="com">&lt;!-- Set 'maxBytesLocalOffHeap' to the amount of off-heap in-memory <br>&nbsp; storage you want to use. This memory is invisible to the Java garbage <br>&nbsp; collector, providing for gigabytes to terabytes of in-memory data without <br>&nbsp; garbage collection pauses. --&gt;</span><span class="pln"> <br>&nbsp; </span><span class="tag">&lt;cache</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"myBigMemoryMaxStore"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">maxBytesLocalHeap</span><span class="pun">=</span><span class="atv">"512M"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="atn">maxBytesLocalOffHeap</span><span class="pun">=</span><span class="atv">"8G"</span><span class="tag">&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- Tell BigMemory to use the "localRestartable" persistence<br>&nbsp; &nbsp; strategy for fast restart (optional). --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;persistence</span><span class="pln"> </span><span class="atn">strategy</span><span class="pun">=</span><span class="atv">"localRestartable"</span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- Include the terracotta element so that the data set will be <br>&nbsp; &nbsp; managed as a client of the Terracotta server array. &nbsp;--&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;terracotta/&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/cache&gt;</span><span class="pln"><br><br>&nbsp; </span><span class="com">&lt;!-- Specify where to find the server array configuration. In this <br>&nbsp; case, the configuration is retrieved from the local server. --&gt;</span><span class="pln"> <br>&nbsp; </span><span class="tag">&lt;terracottaConfig</span><span class="pln"> </span><span class="atn">url</span><span class="pun">=</span><span class="atv">"localhost:9510"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><span class="tag">&lt;/ehcache&gt;</span><span class="pln"><br></span></code></pre>
+
+      Ensure that your `ehcache.xml` file is in the top-level of your classpath.
+      
+      <br/><br/>
+      <h3>Note</h3>
+
+      1 - Use the -XX:MaxDirectMemorySize Java option to allocate enough direct memory in the JVM to accomodate the off-heap storage specified in your configuration, plus at least 250MB to allow for other direct memory usage that might occur in your application. For example: <code>-XX:MaxDirectMemorySize=9G</code> Set MaxDirectMemorySize to the amount of BigMemory you have.
+      <br/>
+      2 - Also, allocate at least enough heap using the -Xmx Java option to accomodate the on-heap storage specified in your configuration, plus enough extra heap to run the rest of your application. For example: <code>-Xmx1g</code>
+      <br/>
+      3 - If necessary, define the JAVA_HOME environment variable.
+
+      <br/><br/>
+
+      <h2>Start The Terracotta Server</h2>
+
+      You should be able to run the server for testing without a configuration change, but we will give you
+      a pointer on where to find the configuration file before starting the server.
+
+      <br/><br/>
+
+      <h3>1 - Configure the Terracotta Server</h3>
+
+       To configure the Terracotta server, create a `tc-config.xml` configuration file, or update the one that is provided in the `config-samples/` directory of the terracotta kit. For example:
+
+       <pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;tc:tc-config xmlns:tc="http://www.terracotta.org/config"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.terracotta.org/schema/terracotta-9.xsd"&gt;
+  &lt;servers&gt;
+    &lt;server host="localhost" name="My Server Name"&gt;
+       &lt;!-- Specify the port clients will connect to the server on. --&gt;
+       &lt;tsa-port&gt;9510&lt;/tsa-port&gt;
+       &lt;!-- Configure memory (off-heap) space to use on the server. --&gt;
+       &lt;dataStorage size=”4g”&gt;
+       &lt;/dataStorage&gt;
+    &lt;/server&gt;
+  &lt;/servers&gt;
+  &lt;clients&gt;
+    &lt;logs&gt;logs-%i&lt;/logs&gt;
+  &lt;/clients&gt;
+&lt;/tc:tc-config&gt;</code></pre>
+
+      	Place your `tc-config.xml` file in the Terracotta `server/` directory.
+
+      <br/><br/>
+
+      <h3>2 - Start the Terracotta Server</h3>
+
+      In a terminal, change to your Terracotta `server/` directory. Then execute the start-tc-server command.
+
+      For *nix systems:
+      <pre>%&gt; cd /path/to/terracotta-&lt;version&gt;/server
+%&gt; ./bin/start-tc-server.sh</pre>
+
+      For Windows systems:
+      <pre>&gt; cd \path\to\terracotta-&lt;version&gt;\server
+&gt; .\bin\start-tc-server.bat</pre>
+
+         You should see confirmation in the terminal that the server started.
+
+
+      <br/><br/>
+
+     <h2>Not quite ready yet?</h2>
+
+     Read the <a href="/documentation">user documentation</a> for everything you've been wondering about the new API!

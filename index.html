@@ -14,9 +14,23 @@ layout: home
 
   <div id="start" class="jumbotron breaker">
     <div class="container">
-
-      {% include tc_quickstart.html %}
-
+      <div id="content">
+          <ul id="startguide-tabs" class="nav nav-tabs" data-tabs="tabs">
+              <li class="active"><a href="#first" data-toggle="tab"><b class="sgtab">Terracotta 4.3 Quick Start</b></a></li>
+              <li><a href="#second" data-toggle="tab"><b class="sgtab">Terracotta 5.0 Quick Start</b></a></li>
+          </ul>
+          <div id="startguide-tab-content" class="tab-content">
+              <div class="tab-pane active" id="first">
+                  {% include tc4x_quickstart.html %}
+              </div>
+              <div class="tab-pane" id="second">
+                  {% include tc5x_quickstart.html %}
+              </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+          jQuery(document).ready(function ($) {
+              $('#startguide-tabs').tab();
+          });
+      </script>
    </div>
-
-  </div>
