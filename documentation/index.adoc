@@ -10,23 +10,22 @@ permalink: /documentation/
 
 #### Current Documentation
 
-[cols="3,1", options="header"]
+[options="header"]
 |===
-|
-|
+|&nbsp;|&nbsp;|&nbsp;
+|BigMemory Max 4.3|link:/documentation/4.3/bmm-all/[HTML, window="_blank"]|link:/documentation/4.3/bmm[PDF]
+|BigMemory Go 4.3|link:/documentation/4.3/bmg-all/[HTML, window="_blank"]|link:/documentation/4.3/bmg[PDF]
+|Quartz Scheduler 2.2|link:/documentation/4.3/qs-all/[HTML, window="_blank"]|
+|Web Sessions 4.3|link:/documentation/4.3/ws-all/[HTML, window="_blank"]|link:/documentation/4.3/ws[PDF]
+|Universal Messaging|link:http://um.terracotta.org[HTML, window="_blank"]|
 
-|link:/documentation/4.3/[Terracotta 4.3 Documentation]
-|link:/apidocs/3.0.0/index.html[JavaDoc ??????, role="external", window="_blank"]
-
-|---
-| &nbsp;
-
-|link:http://www.terracotta.org/confluence/display/release/Home[Platform and Release Compatibility Tables, role="external", window="_blank"]
-|
-
-|link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:http://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
-|
 |===
+
+
+link:http://www.terracotta.org/confluence/display/release/Home[Platform and Release Compatibility Tables, role="external", window="_blank"]
+
+
+link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:http://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
 
 If you don’t find what you’re looking for in the docs, post a question to the https://groups.google.com/forum/#!forum/terracotta-oss[Terracotta support forums, role="external", window="_blank"].
 
@@ -42,11 +41,8 @@ https://confluence.terracotta.org//display/release/Home[Release Notes, role="ext
 
 #### Historical Versions
 
-[cols="3,1", options="header"]
+[options="header"]
 |===
-|
-|
-
-|link:/documentation/4.1/[Terracotta 4.1 Documentation]
-|link:/apidocs/2.9/index.html[JavaDoc ????, role="external", window="_blank"]
+|&nbsp;|&nbsp;
+|Terracotta 3.7 Documentation|link:3.7.4/Terracotta-Documentation-3.7.4.pdf[PDF, window="_blank"]
 |===
