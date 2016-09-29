@@ -87,7 +87,7 @@ h1, h2, h5, h6 {
     color: #f78b0e;
 }
 
-h3, h4 {
+h3 {
     color: #39505f;
     font-size: 20px;
     font-weight: normal;
@@ -171,6 +171,9 @@ hr {
   color: #666;
 }
 
+#start h4 {
+  color: #666;
+}
 
 #start a, #start a:visited, #start a:active {
   color: #f78b02;
