@@ -316,7 +316,7 @@ b.conum * {
 
 
 ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist {
-    margin-bottom: .625em
+    margin-bottom: .225em
 }
 
 ul.unstyled, ol.unnumbered, ul.checklist, ul.none {
@@ -599,7 +599,7 @@ pre {
 .sect1 > h2,
 .sect2 > h3,
 .sect3 > h4 {
-  padding-top: 3em;
+  padding-top: .7em;
 }
 
 #sidebar {
