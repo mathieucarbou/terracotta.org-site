@@ -29,6 +29,11 @@ This is a very liberal license based upon the Mozilla Public License. Free for u
 
 ## Features Not Included in the Open Source edition of Terracotta Server
 
+### 5.x
+* Terracotta Management Console (TMC)
+* Security features (Authentication, Authorization)
+
+### 4.x
 * Terracotta Management Server (TMS) - though REST interfaces are available for monitoring and management to OSS users
 * Terracotta Management Console (TMC)
 * Distributed search functionality
@@ -36,3 +41,4 @@ This is a very liberal license based upon the Mozilla Public License. Free for u
 * Hybrid Store - leverage SSD Flash and NVM storage in addition to RAM
 * Security features (Authentication, Authorization)
 * Multi-stripe server array support
+
