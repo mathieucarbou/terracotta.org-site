@@ -57,7 +57,7 @@ jobs:
             gh_branch=master
             gh_source=master
             echo "Publishing Live site"
-            (bash add-analytics.sh $BUILD_SOURCESDIRECTORY $BUILD_BINARIESDIRECTORY)
+            #(bash add-analytics.sh $BUILD_SOURCESDIRECTORY $BUILD_BINARIESDIRECTORY)
           else
             echo "Unknown branch to deploy: $BUILD_SOURCEBRANCHNAME"
             exit 5
