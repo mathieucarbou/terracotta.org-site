@@ -27,4 +27,4 @@ Keep ALL of your data—up to 100s of terabytes—instantly available in RAM dis
 
 Terracotta actively develops, maintains, and supports Terracotta Server as a professional open source project available under the liberal Terracotta Public License 2.0.  Contributors are welcome to join our community.
 
-For applications requiring complete enterprise functionality including management monitoring console (TMC), fast-restartable store (FRS), security, plus more - along with worldwide professional support, please use http://www.softwareag.com/corporate/products/terracotta/in-memory_data_mgmt/overview/default.asp[Terracotta BigMemory Max] from Software AG.
+For applications requiring complete enterprise functionality including management monitoring console (TMC), fast-restartable store (FRS), security, plus more - along with worldwide professional support, please use https://www.softwareag.com/corporate/products/az/terracotta/default.html[Terracotta] or https://www.softwareag.com/corporate/products/az/terracotta_bigmemory/default.html[Terracotta BigMemory Max] from Software AG.

@@ -6,7 +6,7 @@ active_sub_menu_id: tc_mnu_about_license
 ---
 
 
-Terracotta Server is maintained by Terracotta, Inc., a Software AG company. Terracotta engineers lead the development of Terracotta Server, which is made available as both an open source project and as part of the commercial http://www.softwareag.com/corporate/products/terracotta/in-memory_data_mgmt/overview/default.asp[BigMemory Max] product.
+Terracotta Server is maintained by Terracotta, Inc., a Software AG company. Terracotta engineers lead the development of Terracotta Server, which is made available as both an open source project and as part of the commercial https://www.softwareag.com/corporate/products/az/terracotta/default.html[Terracotta] and https://www.softwareag.com/corporate/products/az/terracotta_bigmemory/default.html[BigMemory Max] products.
 
 
 ## Open Source License
@@ -19,4 +19,4 @@ Most of our other projects and libraries are offered under the Apache 2.0 licens
 
 Looking for a commercially licensed and supported edition of Terracotta Server?
 
-To find out more about the enterprise product, support, and licensing, please refer to the http://www.softwareag.com/corporate/products/terracotta/in-memory_data_mgmt/overview/default.asp[Terracotta product page] as Software AG.
+To find out more about the enterprise product, support, and licensing, please refer to the https://www.softwareag.com/corporate/products/az/terracotta/default.html[Terracotta product page] as Software AG.
