@@ -10,24 +10,39 @@ active_menu_id: tc_mnu_download
 
 ---
 
-### Terracotta Server 5.x
+### Terracotta Server 5.x / Terracotta 10.x
 
+#### Open Source
 
 > http://www.ehcache.org/downloads/[Ehcache 3.x (with clustering) kit]
 
-Terracotta Server 5.x can be downloaded as part of the Ehcache 3.x clustering kit.
+Open Source Terracotta Server 5.x can be downloaded as part of the Ehcache 3.x clustering kit.
 
+#### Free Trial
+
+Get a free trial of Terracotta 10.x including Caching (Ehcache 3.x) and Operational Store (TCStore) capabilities here:
+
+> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/terracotta/download-form/index.html[Terracotta 10.3]
 
 ---
 
 ### Terracotta Server 4.x
 
+#### Open Source
 
-> http://d2zwv9pap9ylyd.cloudfront.net/bigmemory-max-4.3.8.4.2.tar.gz[Terracotta Server 4.3.8]  .tar.gz
+Open Source Terracotta Server 4.x must be built from source (See the link to SVN under the Community menu).
 
-Terracotta server 4.3.x works with Ehcache 2.10.x.
+#### Free Trial
 
-For more information on this release, see the [release  notes](http://www.terracotta.org/confluence/display/release/Home).
+Get a free trial of Terracotta BigMemory Max 4.3.x here:
+
+> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/bigMemoryMax/download-form/index.html[Terracotta BigMemory Max 4.3.x]
+
+Terracotta server 4.3.x works with the Ehcache 2.10.x API.
+
+Get a free trial of Terracotta BigMemory Go here:
+
+> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/bigMemoryGo/download-form/index.html[Terracotta BigMemory Go 4.3.x]
 
 
 ---
