@@ -22,7 +22,7 @@ Open Source Terracotta Server 5.x can be downloaded as part of the Ehcache 3.x c
 
 Get a free trial of Terracotta 10.x including Caching (Ehcache 3.x) and Operational Store (TCStore) capabilities here:
 
-> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/terracotta/download-form/index.html[Terracotta 10.3]
+> https://tech.forums.softwareag.com/pub/terracotta-download-form[Terracotta 10.3]
 
 ---
 
@@ -36,13 +36,13 @@ Open Source Terracotta Server 4.x must be built from source (See the link to SVN
 
 Get a free trial of Terracotta BigMemory Max 4.3.x here:
 
-> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/bigMemoryMax/download-form/index.html[Terracotta BigMemory Max 4.3.x]
+> https://tech.forums.softwareag.com/pub/terracotta-big-memory-max-download-form[Terracotta BigMemory Max 4.3.x]
 
 Terracotta server 4.3.x works with the Ehcache 2.10.x API.
 
 Get a free trial of Terracotta BigMemory Go here:
 
-> http://techcommunity.softwareag.com/ecosystem/communities/public/terracotta/downloads/bigMemoryGo/download-form/index.html[Terracotta BigMemory Go 4.3.x]
+> https://tech.forums.softwareag.com/pub/terracotta-big-memory-go-download-form[Terracotta BigMemory Go 4.3.x]
 
 
 ---
