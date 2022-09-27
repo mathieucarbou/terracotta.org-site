@@ -22,6 +22,8 @@ permalink: /documentation/
 |Terracotta 10.11 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_10-11/webhelp/index.html[HTML, window="_blank"]
 |Terracotta 10.7 Java Doc|link:/files/artifacts/tc-10.5-javadoc.zip[.zip, window="_blank"]
 
+|Terracotta 10.x Presentation on High Availability and Failover-Tuning|link:/documentation/Terracotta 10x - Failover Tuning.pptx.pptx]
+
 |===
 
 
@@ -31,6 +33,8 @@ link:https://confluence.terracotta.org/display/release/Home[Platform and Release
 link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:https://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
 
 ---
+
+
 
 #### Release Notes
 
