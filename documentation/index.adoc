@@ -22,7 +22,7 @@ permalink: /documentation/
 |Terracotta 10.11 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_10-11/webhelp/index.html[HTML, window="_blank"]
 |Terracotta 10.7 Java Doc|link:/files/artifacts/tc-10.5-javadoc.zip[.zip, window="_blank"]
 
-|Terracotta 10.x Presentation on High Availability and Failover-Tuning|link:/documentation/Terracotta 10x - Failover Tuning.pptx.pptx]
+|Terracotta 10.x Presentation on High Availability and Failover-Tuning|link:/documentation/Terracotta_10x_Failover_Tuning.pptx[.pptx], link:/documentation/Terracotta_10x_Failover_Tuning.pdf[.pdf]
 
 |===
 
