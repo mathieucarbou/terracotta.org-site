@@ -38,12 +38,12 @@ Open Source Terracotta Server 4.x must be built from source (See the link to SVN
 
 Get a free trial of BigMemory Max 4.3.x (which includes Terracotta Server 4.x as well and enterprise-only features of Ehcache 2.x) here:
 
-> https://tech.forums.softwareag.com/pub/terracotta-big-memory-max-download-form[Terracotta BigMemory Max 4.3.x]
+> https://tech.forums.softwareag.com/pub/terracotta-big-memory-max-download-form[BigMemory Max 4.3.x]
 
 
 Get a free trial of BigMemory Go (which includes nterprise-only features of Ehcache 2.x) here:
 
-> https://tech.forums.softwareag.com/pub/terracotta-big-memory-go-download-form[Terracotta BigMemory Go 4.3.x]
+> https://tech.forums.softwareag.com/pub/terracotta-big-memory-go-download-form[BigMemory Go 4.3.x]
 
 
 ---
