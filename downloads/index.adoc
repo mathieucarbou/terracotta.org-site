@@ -28,19 +28,20 @@ Get a free trial of Terracotta 10.x including Caching (Ehcache 3.x) and Operatio
 
 ### Terracotta Server 4.x
 
+Terracotta server 4.3.x works with the Ehcache 2.10.x API.
+
 #### Open Source
 
 Open Source Terracotta Server 4.x must be built from source (See the link to SVN under the Community menu).
 
 #### Free Trial
 
-Get a free trial of Terracotta BigMemory Max 4.3.x here:
+Get a free trial of BigMemory Max 4.3.x (which includes Terracotta Server 4.x as well and enterprise-only features of Ehcache 2.x) here:
 
 > https://tech.forums.softwareag.com/pub/terracotta-big-memory-max-download-form[Terracotta BigMemory Max 4.3.x]
 
-Terracotta server 4.3.x works with the Ehcache 2.10.x API.
 
-Get a free trial of Terracotta BigMemory Go here:
+Get a free trial of BigMemory Go (which includes nterprise-only features of Ehcache 2.x) here:
 
 > https://tech.forums.softwareag.com/pub/terracotta-big-memory-go-download-form[Terracotta BigMemory Go 4.3.x]
 
