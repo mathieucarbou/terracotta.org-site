@@ -5,6 +5,7 @@ visible_title: "Terracotta Server and Related Projects"
 permalink: /about/
 active_sub_menu_id: tc_mnu_about_about
 ---
+:page-liquid:
 
 ++++
 {% include about_intro.html %}
