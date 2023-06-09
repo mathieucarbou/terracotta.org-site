@@ -15,11 +15,13 @@ eh3_source_dir: /_eh3
 # Build settings
 markdown: kramdown
 
-
 gems:
   - jekyll-asciidoc
   - jekyll-sitemap
 
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
 
 asciidoctor:
   attributes:
@@ -32,7 +34,6 @@ asciidoctor:
     - sectanchors
     - idprefix
     - idseparator=-
-
 
 defaults:
   -
