@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+{% include header.html %}
 
-    {% include banner.html %}
+{% include banner.html %}
 
-    {{ content }}
+<div id="intro" class="jumbotron breaker">
+    <div class="container">
+        {% include about_intro.html %}
+        <hr/>
+        {% include home_announcement.html %}
+    </div>
+</div>
 
-    {% include footer.html %}
+<div id="start" class="breaker">
+    <div class="container">
+        <h1>{{ page.title | replace: '!DOC_VERSION!', page.tc_version }}</h1>
+        {{ content }}
+    </div>
+</div>
 
-  </body>
+{% include footer.html %}
+
+</body>
 
 </html>
