@@ -53,8 +53,8 @@ Check for the below `INFO` log to confirm if the server started successfully,
 
 Add the following JAR (Ehcache API) from within the kit to your application's classpath (if they are not already there):
 
- * `client/ehcache/ehcache-3.x.y.jar
- * `client/ehcache/ehcache-clustered-3.x.y.jar
+ * `client/ehcache/ehcache-3.x.y.jar`
+ * `client/ehcache/ehcache-clustered-3.x.y.jar`
 
 ==== 2 - Run a sample clustered client
 
