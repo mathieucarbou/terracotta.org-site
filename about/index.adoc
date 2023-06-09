@@ -1,7 +1,7 @@
 ---
 layout: about_page
 title: About
-visible_title: "Terracotta Server and Related Projects"
+visible_title: "Terracotta Server"
 permalink: /about/
 active_sub_menu_id: tc_mnu_about_about
 ---
