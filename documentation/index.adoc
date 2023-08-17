@@ -28,7 +28,7 @@ permalink: /documentation/
 
 |===
 
-link:https://confluence.terracotta.org/display/display/release/Terracotta+10.x+and+BigMemory+4.x+Platform+Support[Terracotta & BigMemory Max Platform and Release Compatibility Tables, role="external", window="_blank"]
+link:https://confluence.terracotta.org/display/release/Terracotta+10.x+and+BigMemory+4.x+Platform+Support[Terracotta & BigMemory Max Platform and Release Compatibility Tables, role="external", window="_blank"]
 
 
 link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:https://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
