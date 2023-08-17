@@ -20,7 +20,15 @@ permalink: /documentation/
 
 |===
 
-link:https://confluence.terracotta.org/display/release/Home[Platform and Release Compatibility Tables, role="external", window="_blank"]
+[options="header"]
+|===
+|4.4.0|&nbsp;
+
+|BigMemory Max 4.4.0 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-max-webhelp/index.html[HTML, window="_blank"]
+
+|===
+
+link:https://confluence.terracotta.org/display/display/release/Terracotta+10.x+and+BigMemory+4.x+Platform+Support[Terracotta & BigMemory Max Platform and Release Compatibility Tables, role="external", window="_blank"]
 
 
 link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link:/files/legal/TOE_3.0.pdf[3rd Party Licenses], link:https://documentation.softwareag.com/legal/[Legal Notices, role="external", window="_blank"]
@@ -49,6 +57,14 @@ link:/about/license.html[License] (Terracotta Public License, Apache 2.0),  link
 |10.3|&nbsp;
 |Terracotta 10.3 Documentation|link:https://documentation.softwareag.com/onlinehelp/Rohan/terracotta-db_10-3/webhelp/index.html[HTML, window="_blank"]
 |Terracotta 10.3 Java Doc|link:/files/artifacts/terracotta-store-client-10.3.0.1.87-javadoc.jar[.jar, window="_blank"]
+|===
+
+[options="header"]
+|===
+|4.4.0|&nbsp;
+|BigMemory Max 4.4.0 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-max-webhelp/index.html[HTML, window="_blank"]
+|BigMemory Go 4.4.0 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html[HTML, window="_blank"]
+|WebSessions 4.4.0 Documentation|link:https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/web-sessions-webhelp/index.html[HTML, window="_blank"]
 |===
 
 [options="header"]
