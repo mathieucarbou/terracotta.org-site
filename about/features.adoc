@@ -15,8 +15,6 @@ Keep ALL of your data—up to 100s of terabytes—instantly available in RAM dis
 * **Off-heap Data Storage** : In-memory data storage is fast.  Terracotta's offheap technology lets you keep as much data in memory as you have RAM.  Tested at 6TB RAM in a single process - with no GC pauses.
 * **High Availability** : Full fault-tolerance / fail-over capabilities deliver always-on uptime.
 
----
-
 ## Open Source Licensing
 
 ### Terracotta Public License
@@ -25,15 +23,16 @@ The open source Terracotta Server is licensed under the  https://raw.githubuserc
 
 This is a very liberal license based upon the Mozilla Public License. Free for use, only requiring attribution when redistributing as part of a larger work.
 
----
-
 ## Features Not Included in the Open Source edition of Terracotta Server
 
-### 5.x
+### Terracotta 10.x (Terracotta Server 5.x)
 * Terracotta Management Console (TMC)
-* Security features (Authentication, Authorization)
+* Security features (Authentication, Authorization, SSL)
+* Multi-strip
+* Backup and restore
+* Fast restartable storage
 
-### 4.x
+### Terracotta 4.x
 * Terracotta Management Server (TMS) - though REST interfaces are available for monitoring and management to OSS users
 * Terracotta Management Console (TMC)
 * Distributed search functionality

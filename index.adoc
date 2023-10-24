@@ -1,0 +1,130 @@
+---
+layout: home
+---
+
+= Getting Started with Terracotta Clustering
+
+Installing and using Terracotta is as easy as downloading the kit and ensuring that the correct files are on your application's classpath for the client components like Ehcache, and then start the server.
+The only platform requirement is using JDK 1.8 or higher.
+
+== Starting a Terracotta Server
+
+=== 1 - Download the Terracotta Server
+
+The Terracotta Server can be either downloaded as part of the Ehcache clustered kit or as a Docker image.
+
+Please see the link:/downloads/[download page] to get the latest kit or Docker image.
+
+If the kit is downloaded, then unpack it with the appropriate decompression application. The kit is packaged as a .tar.gz file.
+
+=== 2 - Start the Terracotta Server
+
+**Local Kit:**
+
+Assuming that you have the clustered Ehcache kit available locally, start with extracting the **ehcache-clustered** kit. Change to your extracted directory and then execute the **start-tc-server** script as below to start the Terracotta server with the above configuration:
+
+```shell
+cd <path/to/terracotta/kit>/server/bin
+
+# On Windows:
+start-tc-server.bat -auto-activate -cluster-name tc-cluster -offheap-resources=offheap-1:512MB,offheap-2:512M
+
+# On Unix / Mac:
+./start-tc-server.sh -auto-activate -cluster-name tc-cluster -offheap-resources=offheap-1:512MB,offheap-2:512M
+```
+
+Please pay attention that the command-line supports a lot of settings, which, by default, are locating the server data and logs inside your home folder at: `~/terracotta`
+
+**With Docker:**
+
+```shell
+docker run --rm -it --publish 9410:9410 -e DEFAULT_ACTIVATE=true terracotta/ehcache-terracotta-server:3.10.8
+```
+
+**Verification:**
+
+Check for the below `INFO` log to confirm if the server started successfully,
+
+`Terracotta Server instance has started up as ACTIVE node on all interfaces (address:/0.0.0.0 port:9410) successfully, and is now ready for work.`.
+
+== Starting a clustered Ehcache client
+
+=== 1 - Setup the classpath
+
+Add the following JAR (Ehcache API) from within the kit to your application's classpath (if they are not already there):
+
+ * `client/ehcache/ehcache-3.x.y.jar`
+ * `client/ehcache/ehcache-clustered-3.x.y.jar`
+
+==== 2 - Run a sample clustered client
+
+This sample will connect to the server, put a key-value in a cache and then retrieve it.
+
+**In Java:**
+
+[source,java]
+----
+try(PersistentCacheManager cacheManager = CacheManagerBuilder.newCacheManagerBuilder()
+  .with(ClusteringServiceConfigurationBuilder.cluster(URI.create("terracotta://localhost:9410/my-cache-manager-name"))
+    .autoCreateOnReconnect(server -> server.defaultServerResource("offheap-1")))
+
+  .withCache("cache", CacheConfigurationBuilder.newCacheConfigurationBuilder(Long.class, String.class,
+    ResourcePoolsBuilder.newResourcePoolsBuilder()
+      .with(ClusteredResourcePoolBuilder.clusteredDedicated("offheap-1", 8, MemoryUnit.MB))))
+
+  .build(true)) {
+
+  Cache<Long, String> cache = cacheManager.getCache("cache", Long.class, String.class);
+
+  cache.put(1L, "one");
+  assertThat(cache.get(1L), equalTo("one"));
+}
+----
+
+**In XML:**
+
+Create an `ehcache.xml` configuration file:
+
+[source,xml]
+.....
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache:config
+    xmlns:ehcache="http://www.ehcache.org/v3"
+    xmlns:tc="http://www.ehcache.org/v3/clustered">
+
+  <ehcache:service>
+    <tc:cluster>
+      <tc:connection url="terracotta://localhost:9410/my-cache-manager-name"/>
+      <tc:server-side-config client-mode="auto-create"/>
+    </tc:cluster>
+  </ehcache:service>
+
+  <ehcache:cache alias="cache">
+    <ehcache:key-type>java.lang.Long</ehcache:key-type>
+    <ehcache:value-type>java.lang.String</ehcache:value-type>
+
+    <ehcache:resources>
+      <tc:clustered-dedicated from="offheap-1" unit="MB">8</tc:clustered-dedicated>
+    </ehcache:resources>
+  </ehcache:cache>
+
+</ehcache:config>
+.....
+
+Then the following code will load the XML configuration and connects to the server:
+
+[source,java]
+----
+try(CacheManager cacheManager = CacheManagerBuilder.newCacheManager(new XmlConfiguration(new File("ehcache.xml").toURI().toURL()))) {
+  cacheManager.init();
+
+  Cache<Long, String> cache = cacheManager.getCache("cache", Long.class, String.class);
+  cache.put(1L, "one");
+  assertThat(cache.get(1L), equalTo("one"));
+}
+----
+
+== More information
+
+Read the link:/documentation/[user documentation] for everything you've been wondering about the new API!
