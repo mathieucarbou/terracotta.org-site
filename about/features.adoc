@@ -28,7 +28,7 @@ This is a very liberal license based upon the Mozilla Public License. Free for u
 ### Terracotta 10.x (Terracotta Server 5.x)
 * Terracotta Management Console (TMC)
 * Security features (Authentication, Authorization, SSL)
-* Multi-strip
+* Multi-stripe
 * Backup and restore
 * Fast restartable storage
 

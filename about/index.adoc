@@ -15,7 +15,7 @@ Visit https://github.com/terracotta-oss for a full list of open source projects 
 
 ## Scale Up and Scale Out
 
-Keep ALL of your data—up to 100s of terabytes—instantly available in RAM distributed across any size server array.
+Keep ALL of your data—100s of terabytes—instantly available in RAM distributed across any size server array.
 
 
 ### Some key features of the Terracotta Server include:
